@@ -29,6 +29,7 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models
         public DateTime? BithDate { get; set; }
         
         [Display(Name = "Gender")]
+        [EnableDataBind("isEnableToEdit")]
         [OptionsDataBind("genders", "person.Gender")]
         [CssClassTag("form-control")]
         public int? Gender { get; set; }

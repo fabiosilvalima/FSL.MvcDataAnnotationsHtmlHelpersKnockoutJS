@@ -171,7 +171,7 @@
     <Compile Include="Annotations\DateDataBindAttribute.cs" />
     <Compile Include="Annotations\EnableDataBindAttribute.cs" />
     <Compile Include="Annotations\MaskDataBindAttribute.cs" />
-    <Compile Include="Annotations\OpcaoDataBindAttribute.cs" />
+    <Compile Include="Annotations\OptionsDataBindAttribute.cs" />
     <Compile Include="Annotations\TagAttribute.cs" />
     <Compile Include="Annotations\ValueDataBindAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
