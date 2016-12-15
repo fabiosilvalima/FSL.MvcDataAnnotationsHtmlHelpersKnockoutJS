@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS/bin
+/FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS/obj/Debug
+*.user
+/packages
