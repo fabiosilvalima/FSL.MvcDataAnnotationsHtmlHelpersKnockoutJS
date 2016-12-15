@@ -21,7 +21,14 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/jquery.maskedinput-1.3.1.js",
+                      "~/Scripts/knockout-3.2.0.js",
+                      "~/Scripts/knockout.mapping-latest.js",
+                      "~/Scripts/knockout-bindings.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/viewmodels").Include(
+                "~/Scripts/view-models/person.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

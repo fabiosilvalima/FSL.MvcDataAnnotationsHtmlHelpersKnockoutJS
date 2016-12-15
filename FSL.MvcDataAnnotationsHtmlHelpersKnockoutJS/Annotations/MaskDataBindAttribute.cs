@@ -10,13 +10,10 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
         {
             None,
             Date,
-            Currency,
             Phone,
-            Cellphone,
             Zipcode,
             Ip,
-            Time,
-            Cpf
+            Time
         }
 
         public MaskDataBindAttribute(string maskObservable)
@@ -29,26 +26,23 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
         public MaskDataBindAttribute(MaskTypes mask)
             : base("")
         {
-            _mask = mask;
+            _maskType = mask;
             switch (mask)
             {
-                case MaskTypes.Date: _mascara = "99/99/9999"; break;
-                case MaskTypes.Phone: _mascara = "(99) 9999-9999"; break;
-                case MaskTypes.Cellphone: _mascara = "(99) 9999-9999?9"; break;
-                case MaskTypes.Zipcode: _mascara = "99999-999"; break;
-                case MaskTypes.Currency: _mascara = ""; break;
-                case MaskTypes.Ip: _mascara = "999.999.999.99"; break;
-                case MaskTypes.Time: _mascara = "99:99"; break;
-                case MaskTypes.Cpf: _mascara = "999.999.999-99"; break;
+                case MaskTypes.Date: _mask = "99/99/9999"; break;
+                case MaskTypes.Phone: _mask = "(99) 9999-9999"; break;
+                case MaskTypes.Zipcode: _mask = "99999-999"; break;
+                case MaskTypes.Ip: _mask = "999.999.999.99"; break;
+                case MaskTypes.Time: _mask = "99:99"; break;
             }
             TagValue = MontarTagValue();
         }
 
-        public MaskDataBindAttribute(string mascara, MaskTypes tipo)
+        public MaskDataBindAttribute(string mask, MaskTypes maskType)
             : base("")
         {
-            _mascara = mascara;
-            _mask = tipo;
+            _mask = mask;
+            _maskType = maskType;
             TagValue = MontarTagValue();
         }
 
@@ -59,8 +53,8 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
         }
 
         private string _maskObservable;
-        private string _mascara;
-        private MaskTypes _mask;
+        private string _mask;
+        private MaskTypes _maskType;
         public string Value { get; set; }
         public int? Precision { get; set; }
         public long? MaxLeftDigits { get; set; }
@@ -69,15 +63,15 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
         {
             var sb = new StringBuilder();
             sb.Append("mask: { mascara: ");
-            if (!string.IsNullOrEmpty(_mascara))
+            if (!string.IsNullOrEmpty(_mask))
             {
-                sb.AppendFormat("'{0}'", _mascara);
+                sb.AppendFormat("'{0}'", _mask);
             }
             else
             {
                 sb.AppendFormat("{0}", !string.IsNullOrEmpty(_maskObservable) ? _maskObservable : "''");
             }
-            sb.AppendFormat(", tipo: '{0}'", _mask.ToString());
+            sb.AppendFormat(", tipo: '{0}'", _maskType.ToString());
 
             if (Precision.HasValue)
             {

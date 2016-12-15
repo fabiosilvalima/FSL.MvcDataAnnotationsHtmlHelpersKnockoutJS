@@ -8,8 +8,8 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models
     {
         [Display(Name = "Name")]
         [Required]
-        [EnableDataBind("isEnableToEdit")]
         [ValueDataBind("person.Name")]
+        [CssClassTag("form-control")]
         public string Name { get; set; }
 
         [ValueDataBind("person.Id")]
@@ -18,19 +18,19 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models
         [Display(Name = "Email")]
         [Required]
         [EmailAddress]
+        [EnableDataBind("isEnableToEdit")]
         [ValueDataBind("person.Email")]
+        [CssClassTag("form-control")]
         public string Email { get; set; }
 
         [Display(Name = "Bith Date")]
         [DateDataBind("person.BithDate")]
+        [CssClassTag("form-control")]
         public DateTime? BithDate { get; set; }
-
-        [Display(Name = "Calendar Date")]
-        [DatePickerDataBind("person.CalendarDate")]
-        public DateTime? CalendarDate { get; set; }
-
+        
         [Display(Name = "Gender")]
-        [OptionsDataBind("genders", "person.Gender", "onGenderClick")]
+        [OptionsDataBind("genders", "person.Gender")]
+        [CssClassTag("form-control")]
         public int? Gender { get; set; }
     }
 }

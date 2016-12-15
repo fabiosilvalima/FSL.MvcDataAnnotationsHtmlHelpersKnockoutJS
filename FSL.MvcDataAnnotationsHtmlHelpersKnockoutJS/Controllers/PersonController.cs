@@ -1,14 +1,23 @@
-﻿using System.Web.Mvc;
+﻿using FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models;
+using System.Web.Mvc;
 
 namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Controllers
 {
     public class PersonController : Controller
     {
-        // GET: Person
+        [HttpGet]
         public ActionResult Index()
         {
-            var viewModel = new Models.PersonViewModel();
+            var viewModel = new PersonViewModel();
 
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(PersonViewModel viewModel)
+        {
             return View(viewModel);
         }
     }
