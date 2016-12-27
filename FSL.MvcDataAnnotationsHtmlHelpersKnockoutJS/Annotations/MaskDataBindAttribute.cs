@@ -13,7 +13,8 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
             Phone,
             Zipcode,
             Ip,
-            Time
+            Time,
+            Currency
         }
 
         public MaskDataBindAttribute(string maskObservable)
@@ -34,6 +35,7 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Annotations
                 case MaskTypes.Zipcode: _mask = "99999-999"; break;
                 case MaskTypes.Ip: _mask = "999.999.999.99"; break;
                 case MaskTypes.Time: _mask = "99:99"; break;
+                case MaskTypes.Currency: _mask = ""; break;
             }
             TagValue = MontarTagValue();
         }

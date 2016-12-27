@@ -8,7 +8,9 @@
 
         update: function (element, valueAccessor, allBindingsAccessor) {
             var mask = valueAccessor();
-            ko.bindingHandlers.mask.createMask(element, ko.bindingHandlers.mask.getObservable(mask.mascara));
+            if (mask.tipo !== 'Currency') {
+                ko.bindingHandlers.mask.createMask(element, ko.bindingHandlers.mask.getObservable(mask.mascara));
+            }
         },
 
         getObservable: function (valor) {
@@ -30,8 +32,19 @@
                 };
             }
 
-            var mascara = ko.bindingHandlers.mask.getObservable(mask.mascara);
-            ko.bindingHandlers.mask.createMask(element, mascara);
+            switch (mask.tipo) {
+                case 'Currency': $(element).maskMoney(options, function (valor) {
+                    if (mask.hasOwnProperty('value')) {
+                        if (mask.value() !== null) {
+                            mask.value(valor);
+                        }
+                    }
+                }); break;
+                default:
+                    var mascara = ko.bindingHandlers.mask.getObservable(mask.mascara);
+                    ko.bindingHandlers.mask.createMask(element, mascara);
+                    break;
+            };
         },
 
         createMask: function (element, mask) {

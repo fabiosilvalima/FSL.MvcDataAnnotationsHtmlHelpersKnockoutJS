@@ -169,8 +169,10 @@
     <Compile Include="Annotations\CssClassTagAttribute.cs" />
     <Compile Include="Annotations\DataBindAttribute.cs" />
     <Compile Include="Annotations\DateDataBindAttribute.cs" />
+    <Compile Include="Annotations\DoubleDataBindAttribute.cs" />
     <Compile Include="Annotations\EnableDataBindAttribute.cs" />
     <Compile Include="Annotations\MaskDataBindAttribute.cs" />
+    <Compile Include="Annotations\NoDataValTagAttribute.cs" />
     <Compile Include="Annotations\OptionsDataBindAttribute.cs" />
     <Compile Include="Annotations\TagAttribute.cs" />
     <Compile Include="Annotations\ValueDataBindAttribute.cs" />
@@ -214,6 +216,7 @@
     <Content Include="Scripts\jquery.maskedinput-1.3.1.js" />
     <Content Include="Scripts\jquery.maskedinput-1.3.1.min.js" />
     <Content Include="Scripts\jquery.maskedinput-1.3.min.js" />
+    <Content Include="Scripts\jquery.maskMoney.0.2.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

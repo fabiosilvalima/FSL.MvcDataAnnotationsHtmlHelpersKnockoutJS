@@ -22,6 +22,7 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
+                      "~/Scripts/jquery.maskMoney.0.2.js",
                       "~/Scripts/jquery.maskedinput-1.3.1.js",
                       "~/Scripts/knockout-3.2.0.js",
                       "~/Scripts/knockout.mapping-latest.js",

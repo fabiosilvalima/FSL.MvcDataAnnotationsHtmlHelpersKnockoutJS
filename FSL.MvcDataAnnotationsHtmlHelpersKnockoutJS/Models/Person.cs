@@ -33,5 +33,11 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models
         [OptionsDataBind("genders", "person.Gender")]
         [CssClassTag("form-control")]
         public int? Gender { get; set; }
+
+        [Display(Name = "Salary")]
+        [NoDataValTag]
+        [DoubleDataBind("person.Salary")]
+        [CssClassTag("form-control")]
+        public double? Salary { get; set; }
     }
 }

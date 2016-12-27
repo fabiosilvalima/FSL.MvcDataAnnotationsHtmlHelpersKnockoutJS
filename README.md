@@ -4,6 +4,12 @@
 
 In this article I will show you how to create data annotations for MVC models and combine with HtmlHelpers to render all attributes of KnockoutJS in input fields.
 
+UPDATES:
+---
+**Dez, 27 - 2016**
+- DoubleDataBind - Currency/Double values for input
+- NoDataValTag - Add data-val="false" attribute in input
+
 ---
 
 What is in the source code?
