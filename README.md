@@ -4,6 +4,11 @@
 
 In this article I will show you how to create data annotations for MVC models and combine with HtmlHelpers to render all attributes of KnockoutJS in input fields.
 
+> **LIVE DEMO:**
+> 
+http://codefinal.com/FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS/Person
+
+
 UPDATES:
 ---
 **Dez, 27 - 2016**
