@@ -4,12 +4,19 @@
 
 In this article I will show you how to create data annotations for MVC models and combine with HtmlHelpers to render all attributes of KnockoutJS in input fields.
 
-![enter image description here](https://fabiosilvalima.files.wordpress.com/2016/12/nockjout-js-mvc.png)
+![enter image description here](https://fabiosilvalima.net/wp-content/uploads/2017/01/fabiosilvalima-data-annotations-e-htmlhelpers-de-mvc-para-knockoutjs.jpg)
 
 > **LIVE DEMO:**
 > 
 http://codefinal.com/FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS/Person
 
+> **FULL ARTICLE:**
+>
+> English: https://fabiosilvalima.net/en/mvc-data-annotations-knockoutjs/
+>
+> PortuguÃªs: https://fabiosilvalima.net/data-annotations-de-mvc-para-knockoutjs/
+
+---
 
 UPDATES:
 ---
@@ -115,7 +122,7 @@ n HTML the usage is something like that:
 
 <select id="Person_Gender" name="Person.Gender" data-bind="enable: isEnableToEdit, options: genders, optionsText: 'Name', optionsValue:'Id', value: person.Gender" class="form-control"></select>
 
-<input class="text-box single-line, form-control" data-val="true" data-val-email="O campo Email não é um endereço de email válido." data-val-required="The field Email is required" id="Person_Email" name="Person.Email" type="email" value="" data-bind="enable: isEnableToEdit, value: person.Email">
+<input class="text-box single-line, form-control" data-val="true" data-val-email="O campo Email nÃ£o Ã© um endereÃ§o de email vÃ¡lido." data-val-required="The field Email is required" id="Person_Email" name="Person.Email" type="email" value="" data-bind="enable: isEnableToEdit, value: person.Email">
 ```
 
 The javascript file bellow it's to control some data in KnockoutJS for the frontend. The "isEnableToEdit" computed function below it's used in EnableDataBind annotation in MVC Person model.
@@ -171,4 +178,4 @@ Licence:
 - Licence MIT
 
 
-  [1]: http://fabiosilvalima.net
+  [1]: https://fabiosilvalima.net
