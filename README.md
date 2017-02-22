@@ -13,7 +13,10 @@ http://codefinal.com/FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS/Person
 
 UPDATES:
 ---
-**Dez, 27 - 2016**
+**Fev - 2017**
+- ValueDataBind - Option to configure when value will update (after keyup, keydown...)
+
+**Dez - 2016**
 - DoubleDataBind - Currency/Double values for input
 - NoDataValTag - Add data-val="false" attribute in input
 

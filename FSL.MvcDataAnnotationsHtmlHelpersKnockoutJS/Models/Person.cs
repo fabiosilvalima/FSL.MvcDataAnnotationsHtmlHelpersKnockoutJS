@@ -8,7 +8,7 @@ namespace FSL.MvcDataAnnotationsHtmlHelpersKnockoutJS.Models
     {
         [Display(Name = "Name")]
         [Required]
-        [ValueDataBind("person.Name")]
+        [ValueDataBind("person.Name", ValueDataBindAttribute.ValueUpdates.AfterKeyDown)]
         [CssClassTag("form-control")]
         public string Name { get; set; }
 
